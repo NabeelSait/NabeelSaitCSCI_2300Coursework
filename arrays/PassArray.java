@@ -20,8 +20,6 @@ public class PassArray
          String temp = values[0];
          values[0] = values[values.length-1];
          values[values.length-1] = temp;
-         System.out.println("First value is "+values[0]);
-         System.out.println("Last values is "+values[values.length-1]);
       }
       else
       {
@@ -38,5 +36,8 @@ public class PassArray
       printFirst(valuesFromTerminal); 
       System.out.println("SWAPPING FIRST and LAST");
       swap(valuesFromTerminal);
+      System.out.println("First value is "+valuesFromTerminal[0]);
+         System.out.println("Last values is "+valuesFromTerminal[valuesFromTerminal.length-1]);
+
    }
 }
