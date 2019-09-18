@@ -27,7 +27,7 @@ public class Pizza
   public String toString()
   {
     String out = "";
-    for (int i = 0; i < (this.count - 1); i++)
+    for (int i = 0; i < this.count; i++)
     {
       out += toppings[i].toString() + "\n";
     }
