@@ -16,15 +16,18 @@ public class Pizza
 
   public void addTopping(String t)
   {
-    Topping newTopping = new Topping(t);
-    toppings[count] = newTopping;
-    count ++;
+    if (count < 20)
+    {
+      Topping newTopping = new Topping(t);
+      toppings[count] = newTopping;
+      count ++;
+    }
   }
 
   public String toString()
   {
     String out = "";
-    for (int i = 0; i < this.count; i++)
+    for (int i = 0; i < (this.count - 1); i++)
     {
       out += toppings[i].toString() + "\n";
     }
