@@ -7,5 +7,6 @@ public interface IMovable
 {
    public void moveUp(int distance);
    public void moveDown(int distance);
-   //TODO: add method signatures for moving left and right
+   public void moveRight(int distance);
+   public void moveLeft(int distance);
 }

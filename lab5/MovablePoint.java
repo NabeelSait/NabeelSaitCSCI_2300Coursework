@@ -12,7 +12,7 @@ public class MovablePoint implements IMovable
       this.x = x;
       this.y = y;
    }
-  
+
    public String toString()
    {
       String value = "(" + x + "," + y + ")";
@@ -20,6 +20,11 @@ public class MovablePoint implements IMovable
    }
 
    public void moveUp(int distance){y = y + distance;}
-   // TODO: implement all other methods of IMovable interrface
+
+   public void moveDown(int distance) { y = y - distance;}
+
+   public void moveRight(int distance) {x = x + distance;}
+
+   public void moveLeft(int distance) {x = x - distance;}
 
 }

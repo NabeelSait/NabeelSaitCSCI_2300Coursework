@@ -7,7 +7,7 @@ public class MovableCircle
 {
    private int radius;
    private MovablePoint center;
-   
+
    public MovableCircle(MovablePoint center, int radius)
    {
       this.center = center;
@@ -20,6 +20,24 @@ public class MovableCircle
       return value;
    }
 
-   // TODO: implement all methods of IMovable interrface
- 
+   public void moveUp(int distance)
+   {
+     center.moveUp(distance);
+   }
+
+   public void moveDown(int distance)
+   {
+     center.moveDown(distance);
+   }
+
+   public void moveRight(int distance)
+   {
+     center.moveRight(distance);
+   }
+
+   public void moveLeft(int distance)
+   {
+     center.moveLeft(distance);
+   }
+
 }
