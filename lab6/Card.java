@@ -28,7 +28,7 @@ public class Card{
        // check if the suite is valid
        if (s != 'D' && s != 'H' && s != 'S' && s != 'C')
        {
-          // TODO: throw an exception
+          throw new InvalidParameterException("Value must be ether 'D', 'H', 'S' or 'C'");
        }
        value = val;
        suite = s;
@@ -41,7 +41,7 @@ public class Card{
    public char getSuite(){
       return suite;
    }
- 
+
    public String toString()
    {
       String cardDescription = "";
