@@ -30,7 +30,7 @@ public class AppointmentBook
 
   public ArrayList<Event> getEventsForDate(GregorianCalendar gc)
   {
-    ArrayList<Event> e = new ArrayList();
+    ArrayList<Event> e = new ArrayList<Event>();
 
     for (int i = 0; i < events.size(); i++)
     {
