@@ -1,5 +1,5 @@
 import java.io.FileNotFoundException;
-import control.LoadQuiz;
+import control.*;
 
 public class UIDriver
 {
@@ -7,7 +7,7 @@ public class UIDriver
    {
       try
       {
-         StudentQuizControl control = new StudentQuizControl("csci2300", "quiz1", "data"); 
+         StudentQuizControl control = new StudentQuizControl("csci2300", "quiz1", "data");
       }
       catch(FileNotFoundException e)
       {
