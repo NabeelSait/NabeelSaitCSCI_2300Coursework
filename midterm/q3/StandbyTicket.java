@@ -1,7 +1,7 @@
 public class StandbyTicket
 {
-    private String passengerName;
-    private Flight flight;
+    protected String passengerName;
+    protected Flight flight;
 
     public void setPassengerName(String name)
     {
@@ -12,5 +12,4 @@ public class StandbyTicket
     {
         this.flight = flight;
     }
-     
 }

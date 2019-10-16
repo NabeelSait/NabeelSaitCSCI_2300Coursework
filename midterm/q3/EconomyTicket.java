@@ -1,19 +1,7 @@
-public class EconomyTicket
+public class EconomyTicket extends StandbyTicket
 {
-    private String passengerName;
-    private Flight flight;
-    private int row;
-    private char seat;
-
-    public void setPassengerName(String name)
-    {
-        this.passengerName = name;
-    }
-
-    public void setFlight(Flight flight)
-    {
-        this.flight = flight;
-    }
+    protected int row;
+    protected char seat;
 
     public void reserveSeat(int row, char seat)
     {
