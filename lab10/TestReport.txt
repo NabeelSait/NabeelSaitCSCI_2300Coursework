@@ -1,0 +1,5 @@
+New Errors Found:
+
+puzzle.move() states a move is valid even if a number greater than the amount of squares is called
+
+puzzle.isSolved returns false even if called on a solved Puzzle

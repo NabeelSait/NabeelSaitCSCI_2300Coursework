@@ -36,6 +36,10 @@ public class PuzzleTest
       {
          System.out.println("ERROR in testMoveInvalid: expected false, puzzle.move() returned true");
       }
+      if (puzzle.move(10) == true)
+      {
+         System.out.println("ERROR in testMoveInvalid: expected false, puzzle.move() returned true");
+      }
    }
 
    public static void testMoveValid()
@@ -58,6 +62,21 @@ public class PuzzleTest
       }
    }
 
+   public static void testIsSolved()
+   {
+      Puzzle puzzle = new Puzzle(Level.EASY);
+      System.out.println("isSolved is called with an unsolved Puzzle");
+      if (puzzle.isSolved() == true)
+      {
+         System.out.println("ERROR in testIsSolved: expected false, isSolved() returned true");
+      }
+      Puzzle new_puzzle = initOrderedPuzzle(9);
+      if (new_puzzle.isSolved() == false)
+      {
+         System.out.println("ERROR in testIsSolved: expected true, isSolved() returned false");
+      }
+   }
+   
    public static void main(String []args)
    {
       testConstructor(Level.EASY, 3);
@@ -66,5 +85,6 @@ public class PuzzleTest
       testMoveValid();
       testMoveInvalid();
       getSizeTest(64);
+      testIsSolved();
    }
 }
