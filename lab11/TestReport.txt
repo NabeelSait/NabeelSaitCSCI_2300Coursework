@@ -1,0 +1,5 @@
+Errors Found:
+
+New Error at testMoveInvalid() where puzzle.move() returns false when true is expected.
+
+New error when testisSolved() where puzzle.isSolved() returns false when true is expected 

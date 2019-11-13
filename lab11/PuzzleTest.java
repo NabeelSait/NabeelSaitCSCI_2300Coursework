@@ -28,7 +28,7 @@ public class PuzzleTest
       Puzzle puzzle = new Puzzle(Level.EASY);
       puzzle.size = expectedSize;
       int actualSize = puzzle.getSize();
-      assertEquals("puzzle.getSize()", expectedSize, actualSize); 
+      assertEquals("puzzle.getSize()", expectedSize, actualSize);
    }
 
    @Test
@@ -36,6 +36,7 @@ public class PuzzleTest
    {
       Puzzle puzzle = initOrderedPuzzle(9);
       assertEquals("puzzle.move()", false,  puzzle.move(8));
+      assertEquals("puzzle.move()", false, puzzle.move(10));
    }
 
    @Test
@@ -44,7 +45,7 @@ public class PuzzleTest
       Puzzle puzzle = initOrderedPuzzle(9);
       assertEquals("puzzle.move()", true, puzzle.move(1));
    }
- 
+
    @Test
    public void testConstructorEasyLevel()
    {
@@ -61,6 +62,15 @@ public class PuzzleTest
    public void testConstructorHardLevel()
    {
       testConstructor(Level.HARD, 5);
+   }
+
+   @Test
+   public void testIsSolved()
+   {
+      Puzzle puzzle = new Puzzle(Level.EASY);
+      assertEquals("puzzle.isSolved()", false, puzzle.isSolved());
+      puzzle = initOrderedPuzzle(9);
+      assertEquals("puzzle.isSolved()", false, puzzle.isSolved());
    }
 
    @Test
