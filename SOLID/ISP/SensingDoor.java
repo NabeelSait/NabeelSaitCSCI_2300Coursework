@@ -36,13 +36,6 @@ public class SensingDoor implements Door
         opened = false;
     }
 
-    @Override
-    public void timeOutCallback()
-    {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override
     public void proximityCallback()
     {
         opened = true;

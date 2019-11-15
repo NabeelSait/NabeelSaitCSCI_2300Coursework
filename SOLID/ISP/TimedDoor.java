@@ -37,15 +37,9 @@ public class TimedDoor implements Door
         opened = false;
     }
 
-    @Override
     public void timeOutCallback()
     {
         locked = true;
     }
 
-    @Override
-    public void proximityCallback()
-    {
-        throw new UnsupportedOperationException();
-    }
 }
