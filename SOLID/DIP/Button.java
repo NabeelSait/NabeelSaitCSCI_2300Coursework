@@ -1,24 +1,24 @@
 public class Button
 {
-    private Lamp lamp;
+    private Equipment equipment;
     private boolean state;
 
-    public Button(Lamp lamp)
+    public Button(Equipment e)
     {
-        this.lamp = lamp;
+        this.equipment= e;
     }
 
     public void toggle()
     {
         state = !state;
         boolean buttonOn = state;
-        if (buttonOn) 
+        if (buttonOn)
         {
-            lamp.turnOn();
-        } 
-        else 
+            equipment.turnOn();
+        }
+        else
         {
-            lamp.turnOff();
+            equipment.turnOff();
         }
     }
 }
