@@ -34,13 +34,19 @@ public class StoreView extends JPanel
       while (itemIterator.hasNext())
       {
          JPanel itemPanel = new JPanel();
-          
+
          itemPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
          Item item = itemIterator.next();
          JLabel itemLabel = new JLabel(item.getDescription());
          itemLabel.setBorder(new EmptyBorder(0, 0, 0, 10));
          JLabel priceLabel = new JLabel("$"+item.getPrice());
          JButton itemButton = new JButton("ADD TO CART");
+         itemButton.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e)
+            {
+               cart.addItem(item);
+            }
+         });
          itemPanel.add(itemLabel);
          itemPanel.add(priceLabel);
          itemPanel.add(itemButton);
