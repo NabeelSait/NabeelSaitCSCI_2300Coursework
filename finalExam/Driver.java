@@ -17,10 +17,10 @@ public class Driver
    {
       if (inventoryFile.endsWith(".csv"))
       {
-         InventoryFromCSV dataLoader = new InventoryFromCSV(inventoryFile);
+         InventoryFromFile dataLoader = new InventoryFromCSV(inventoryFile);
          try
          {
-            storeModel.initializeInventory(dataLoader);         
+            storeModel.initializeInventory(dataLoader);
          }
          catch (IOException e)
          {
@@ -33,7 +33,7 @@ public class Driver
       }
 
    }
-   
+
    public static void main(String []args)
    {
       StoreModel storeModel = new StoreModel();
@@ -51,7 +51,7 @@ public class Driver
       String inventoryFile = args[0];
       loadInventory(storeModel, inventoryFile);
 
-      
+
       // create a cart
       Cart cart = new Cart();
 

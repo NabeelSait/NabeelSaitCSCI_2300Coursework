@@ -2,16 +2,14 @@ package model.dataLoaders;
 
 import model.store.Inventory;
 
-public class InventoryFromJSON
+public class InventoryFromJSON extends InventoryFromFile
 {
-   protected String fileName;
    public InventoryFromJSON(String fileName)
    {
-      this.fileName = fileName;
+      super(fileName);
    }
-   public Inventory readFromJSON()
+   public Inventory readFromFile()
    {
       return new Inventory();
    }
 }
-

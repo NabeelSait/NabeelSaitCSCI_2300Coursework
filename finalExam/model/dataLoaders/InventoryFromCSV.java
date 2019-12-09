@@ -7,14 +7,14 @@ import java.io.FileReader;
 
 import java.io.IOException;
 
-public class InventoryFromCSV
+public class InventoryFromCSV extends InventoryFromFile
 {
-   protected String fileName;
+
    public InventoryFromCSV(String fileName)
    {
-       this.fileName = fileName;
+       super(fileName);
    }
-   public Inventory readFromCSV() throws IOException
+   public Inventory readFromFile() throws IOException
    {
       Inventory result = new Inventory();
       try

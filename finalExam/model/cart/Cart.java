@@ -7,7 +7,7 @@ import model.store.Item;
 public class Cart
 {
    // items in this cart
-   protected ArrayList<CartItem> items;
+   public ArrayList<CartItem> items;
 
    /**
     * Creates an empty cart
@@ -18,8 +18,8 @@ public class Cart
    }
 
    /**
-    * Adds an item to the cart, duplicate items should not be added:OB 
-    * if a duplcate item is being added, the quantity of that item in the cart 
+    * Adds an item to the cart, duplicate items should not be added:OB
+    * if a duplcate item is being added, the quantity of that item in the cart
     * needs to be incremented
     */
    public void addItem(Item item)

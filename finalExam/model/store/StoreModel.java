@@ -12,9 +12,9 @@ public class StoreModel
    /**
     * This method must be called prior to any other methods
     **/
-   public void initializeInventory(InventoryFromCSV source) throws IOException
+   public void initializeInventory(InventoryFromFile source) throws IOException
    {
-      this.inventory = source.readFromCSV();  
+      this.inventory = source.readFromFile();  
    }
 
    public void addItem(Item item)
@@ -29,7 +29,7 @@ public class StoreModel
    {
       return inventory.getItemById(itemId);
    }
-  
+
    public Iterator<Item> inventoryIterator()
    {
        return inventory.items.iterator();

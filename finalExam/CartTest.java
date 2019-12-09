@@ -84,4 +84,18 @@ public class CartTest
 
       assertEquals("Total is not equal to $3.00", 3, cart.getTotal(), 0);
    }
+
+   @Test
+   public void testgetTotal_floats()
+   {
+      Cart cart = new Cart();
+      Item item1 = new Item(12345, "X", 1.73f);
+      Item item2 = new Item(12435, "Y", 2.60f);
+      Item item3 = new Item(1234, "Z", 3.45f);
+      cart.addItem(item1);
+      cart.addItem(item2);
+      cart.addItem(item3);
+
+      assertEquals("Total is not equal to $7.78", 7.78, cart.getTotal(), 0);
+   }
 }
